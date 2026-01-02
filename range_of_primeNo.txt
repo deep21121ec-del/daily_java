@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int m = in.nextInt();
+		int n = in.nextInt();
+		for(int i=m; i<=n; i++) {
+			if(isPrime(i)) {
+				System.out.print(i+ " ");
+			}
+		}
+	}
+
+	static boolean isPrime(int val) {
+		int c = 2;
+		if(val < 2) {
+			return false;
+		}
+
+		else {
+			while(c*c <= val) {
+				if(val % c == 0) {
+					return false;
+				}
+				c++;
+			}
+			return (c*c > val);
+		}
+	}
+}
