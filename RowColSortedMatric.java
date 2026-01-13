@@ -1,3 +1,7 @@
+// Implemented an O(n + m) algorithm to find a target element in a matrix sorted by rows and columns.
+// The solution starts from the top-right corner and eliminates one row or column per comparison.
+// Includes clear return of 1-based indices and proper handling when the target is not found.
+
 import java.util.Arrays;
 
 public class RowColSortedMatric {
